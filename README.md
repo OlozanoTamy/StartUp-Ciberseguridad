@@ -17,16 +17,17 @@ Bienvenido al repositorio oficial del sitio web de CyberSecurity Startup. Este p
 ## 📂 Estructura del Proyecto
 ```
 Startup Ciberseguridad/
-├── public/         # Archivos estáticos
+├── public/            # Archivos estáticos
 ├── src/
-│   ├── assets/     # Imágenes e íconos
-│   ├── components/ # Componentes reutilizables
-│   ├── pages/      # Páginas de la aplicación (Inicio, Servicios, etc.)
-│   ├── App.jsx     # Archivo principal de la aplicación
-│   └── main.jsx    # Punto de entrada
-├── index.html      # Plantilla HTML principal
-├── package.json    # Dependencias y scripts del proyecto
-└── vite.config.js  # Configuración de Vite
+│   ├── assets/        # Imágenes e íconos
+│   ├── components/    # Componentes reutilizables
+│   ├── pages/         # Páginas de la aplicación (Inicio, Servicios, etc.)
+│   ├── App.jsx        # Archivo principal de la aplicación
+│   └── main.jsx       # Punto de entrada
+├── index.html         # Plantilla HTML principal
+├── package.json       # Dependencias y scripts del proyecto
+├── tailwind.config.js # Configuracion de tailwind
+└── vite.config.js     # Configuración de Vite
 ```
 
 ## 💻 Comenzando
