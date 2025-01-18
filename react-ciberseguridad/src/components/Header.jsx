@@ -1,5 +1,7 @@
+/*se usa la funcion link de react-router-dom */
 import { Link } from 'react-router-dom';
 
+/*Header */
 function Header() {
   return (
     <header className="bg-gray-800 text-white p-4">
@@ -11,6 +13,7 @@ function Header() {
             <li><Link to="/services">Servicios</Link></li>
             <li><Link to="/about">Nosotros</Link></li>
             <li><Link to="/contact">Contacto</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
           </ul>
         </nav>
       </div>
