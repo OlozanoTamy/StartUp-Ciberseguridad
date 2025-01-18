@@ -9,5 +9,5 @@ export const getAllPosts = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
-import BlogPost from '../models/blogModel.js';
+
 

@@ -20,3 +20,6 @@ const blogSchema = new mongoose.Schema(
         },
     });
 
+const BlogPost = mongoose.model('BlogPost', blogSchema);
+
+export default BlogPost;
