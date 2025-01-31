@@ -68,7 +68,7 @@ Startup Ciberseguridad/
 ### Modo de Desarrollo
 Utiliza los siguientes comandos para ejecutar la aplicación localmente:
 - Front-end: `npm run dev`
-- Back-end (si aplica): Inicia tu servidor Node.js por separado.
+- Back-end: Inicia tu servidor Node.js por separado.
 
 ### Construcción para Producción
 Para construir el proyecto para producción:
