@@ -6,11 +6,12 @@ import Services from '../pages/Services';
 import Contact from '../pages/Contact';
 import About from '../pages/About';
 import Blog from '../pages/Blog';
+import Ejemplo from "../components/Ejemplo";
 
 const Rutas = () => {
   return (
     <BrowserRouter>
-      <Header />
+      <Ejemplo />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
