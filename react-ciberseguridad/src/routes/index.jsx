@@ -11,15 +11,17 @@ import Ejemplo from "../components/Ejemplo";
 const Rutas = () => {
   return (
     <BrowserRouter>
-      <Ejemplo />
+      <Ejemplo/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
+
       </Routes>
       <Footer />
+
     </BrowserRouter>
   );
 }

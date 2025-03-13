@@ -19,18 +19,19 @@ const services = [
     { id: 1, name: 'Auditorías de Seguridad', description: 'Identificación de vulnerabilidades.', icon: ChartBarSquareIcon },
     { id: 2, name: 'Análisis Forense', description: 'Investigación post-incidentes.', icon: ChartPieIcon},
     { id: 3, name: 'Protección de Datos', description: 'Cumplimiento de normativas legales.',icon: ChartPieIcon },
-  ];
+];
 
-  const callsToAction = [
+const callsToAction = [
     {name:"Mira un Demo", icon:PlayCircleIcon},
     { name: "contacta con ventas",icon:PhoneIcon}
-  ]
+]
 
 const Ejemplo = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  return (
+    
+return (
     <header className="bg-white">
-       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+    <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
             
             <div className ="flex lg:flex-1">
                 <Link to="/" className="text-xl font-bold">
@@ -84,16 +85,16 @@ const Ejemplo = () => {
 
                                     <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                                     {callsToAction.map((item) => (
-                  <Link
+                <Link
                     key={item.name}
                     href={item.href}
                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
-                  >
+                >
                     <item.icon aria-hidden="true" className="size-5 flex-none text-gray-400" />
                     {item.name}
-                  </Link>
+                </Link>
                 ))}
-              </div>
+            </div>
 </PopoverPanel>
                             </Popover>
                             <Link to="/about" className="text-sm/6 font-semibold text-gray-900">Nosotros</Link>
@@ -109,7 +110,7 @@ const Ejemplo = () => {
             </div>
         </nav>
 
-         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+        <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
                 <div className="fixed inset-0 z-10">
                     <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
@@ -149,7 +150,6 @@ const Ejemplo = () => {
                                     ))}
                                     </DisclosurePanel>
                             </Disclosure>                    
-
                         </div>
                             
                         <Link to="/about" className="block p-4 text-sm/6 font-semibold text-gray-900">
