@@ -17,20 +17,31 @@ Bienvenido al repositorio oficial del sitio web de CyberSecurity Startup. Este p
 ## 📂 Estructura del Proyecto
 ```
 Startup Ciberseguridad/
-├── public/            # Archivos estáticos
+├── cybersecurity-api # Backend del proyecto
+│   ├── src/
+│       ├── config/
+│       ├── controllers/  
+│       ├── routes/
+│   ├── app.js
+│   ├── index.js
+│   ├── package-lock.json   # Dependencias y versiones bloqueadas del proyecto
+│   ├── package.json        # Dependencias y scripts del proyecto
+├── react-ciberseguridad
+├── public/                 # Archivos estáticos
 ├── src/
-│   ├── assets/        # Imágenes e íconos
-│   ├── components/    # Componentes reutilizables
-│   ├── pages/         # Páginas de la aplicación (Inicio, Servicios, etc.)
-│   ├── App.jsx        # Archivo principal de la aplicación
-│   └── main.jsx       # Punto de entrada
+│   ├── assets/             # Imágenes e íconos
+│   ├── components/         # Componentes reutilizables
+│   ├── pages/              # Páginas de la aplicación (Inicio, Servicios, etc.)
+│   ├── routes/             # Rutas de la Aplicacion
+│   ├── App.jsx             # Archivo principal de la aplicación
+│   └── main.jsx            # Punto de entrada
 ├── index.html         # Plantilla HTML principal
 ├── package.json       # Dependencias y scripts del proyecto
-├── tailwind.config.js # Configuracion de tailwind
+├── tailwind.config.js # Configuración de tailwind
 └── vite.config.js     # Configuración de Vite
 ```
 
-## 💻 Comenzando
+## 💻 Comenzando para el front-end
 
 ### Prerrequisitos
 - Node.js (se recomienda la versión 16+).
@@ -39,8 +50,8 @@ Startup Ciberseguridad/
 ### Instalación
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/cybersecurity-website.git
-   cd cybersecurity-website
+   git clone https://github.com/OlozanoTamy/StartUp-Ciberseguridad.git
+   cd STARTUP CIBERSEGURIDAD/react-ciberseguridad
    ```
 
 2. Instala las dependencias:
@@ -85,7 +96,30 @@ El resultado estará disponible en la carpeta `dist/`.
 4. Sube la rama y abre un pull request.
 
 
-## Proximamente Back-End
+##  Back-End
+
+### Instalación
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/OlozanoTamy/StartUp-Ciberseguridad.git
+   cd STARTUP CIBERSEGURIDAD/cybersecurity-api
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npx nodemon src/index.js
+   ```
+
+4. Deberas ver en tu terminal
+   ```
+   Servidor corriendo en http://localhost:5000
+   ```
+
 
 ## 📧 Contacto
 Si tienes alguna pregunta, no dudes en contactarnos:
