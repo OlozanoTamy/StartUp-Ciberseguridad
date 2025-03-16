@@ -1,6 +1,6 @@
 import pool from "../config/database.js";
 
-// Obtener todos los blogs
+// Obtener todos los blogs - READ
 export const getAllBlogs = async (req, res) => {
     try {
         const result = await pool.query('SELECT * FROM blogs');
@@ -24,11 +24,13 @@ export const getBlogById = async (req, res) => {
         console.error('Error al obtener el blog:', error);
         res.status(500).json({ message: 'Error interno del servidor' });
     }
+
 };
 
-// Crear un nuevo blog
+// Crear un nuevo blog - CREATE
 export const createBlog = async (req, res) => {
     const { titulo, contenido, id_usuario } = req.body;
+    console.log(titulo, contenido, id_usuario);
     try {
         const result = await pool.query(
             'INSERT INTO blogs (titulo, contenido, id_usuario) VALUES ($1, $2, $3) RETURNING *',
@@ -41,7 +43,7 @@ export const createBlog = async (req, res) => {
     }
 };
 
-// Actualizar un blog
+// Actualizar un blog - UPDATE
 export const updateBlog = async (req, res) => {
     const { id } = req.params;
     const { titulo, contenido } = req.body;
@@ -60,7 +62,7 @@ export const updateBlog = async (req, res) => {
     }
 };
 
-// Eliminar un blog
+// Eliminar un blog - DELETE
 export const deleteBlog = async (req, res) => {
     const { id } = req.params;
     try {

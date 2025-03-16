@@ -29,13 +29,29 @@ export const createUser = async (req, res) => {
     }
 };
 
+
+// Eliminar un usuario  - DELETE
+export const deleteUser = async (req, res) => {
+    const { id } = req.params;  // Obtenemos el ID del usuario a eliminar
+    if (!id) return res.status(400).json({ message: 'El ID del usuario es requerido' });    // Validamos que el ID no sea nulo
+    try {   // Intentamos eliminar el usuario
+        const result = await pool.query('DELETE FROM usuarios WHERE id_usuario = $1 RETURNING *', [id]);
+        if (result.rows.length === 0) return res.status(404).json({ message: 'Usuario no encontrado' });    // Si no se encontró el usuario, devolvemos un 404          
+        res.status(200).json({ message: 'Usuario eliminado exitosamente', data: result.rows[0] });    // Si se eliminó el usuario, devolvemos un 200
+    } catch (error) {   // Si hubo un error al eliminar el usuario, devolvemos un 500
+        console.error('Error al eliminar el usuario:', error);
+        res.status(500).json({ message: 'Error interno del servidor' });
+    }
+}
+
+
 // Actualizar un usuario
 export const updateUser = async (req, res) => {
     const { id } = req.params;
+    console.log(id);
     const { nombre, email, contraseña, rol_id } = req.body;
     if (!id) return res.status(400).json({ message: 'El ID del usuario es requerido' });
     else if (!nombre && !email && !contraseña && !rol_id) return res.status(400).json({ message: 'Se requiere al menos un campo para actualizar' });
-
     try {
         const result = await pool.query(
             'UPDATE usuarios SET nombre = $1, email = $2, contraseña = $3, rol_id = $4 WHERE id_usuario = $5 RETURNING *',
