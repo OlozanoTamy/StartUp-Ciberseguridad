@@ -5,7 +5,7 @@ import Blog from "../pages/Blog";
 import Services from "../pages/Services";
 import Contact from "../pages/Contact";
 import Login from "../pages/Login";
-
+import AdminUsuarios from "../components/AdminUsuarios.jsx";
 const Rutas = () => {
   return (
 <>
@@ -16,6 +16,7 @@ const Rutas = () => {
       <Route path="/services" element={<Services/>}/>
       <Route path="/contact" element={<Contact/>}/>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/admin" element={<AdminUsuarios />} />
     </Routes>
 </>
 

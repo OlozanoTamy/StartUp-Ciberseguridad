@@ -1,5 +1,5 @@
 import express from 'express';
-import { getAllUsers, createUser, getAllRoles, createRole, deleteUser, updateUser } from '../controllers/userController.js';
+import { getAllUsers, createUser, getAllRoles, createRole, deleteUser, updateUser, userExists } from '../controllers/userController.js';
 
 const router = express.Router();
 
@@ -12,6 +12,8 @@ router.post('/usuarios', createUser);
 // Ruta para obtener todos los roles
 router.get('/roles', getAllRoles);
 
+//Ruta para obtener un usuario con email y contraseña
+router.post('/usuarios/login', userExists);
 
 //Ruta para actualizar un usuario
 router.put('/usuarios/:id', updateUser);
